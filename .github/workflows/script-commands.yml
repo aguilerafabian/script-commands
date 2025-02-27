@@ -6,17 +6,15 @@ on:
 
 jobs:
   scriptCommands:
-    runs-on: macos-12
+    runs-on: macos-15
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Xcode
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: 13.4.1
+        uses: raycast/github-actions/setup-xcode@xcode-16.1.x
 
       - name: Setup GIT
         uses: raycast/github-actions/setup-git@v1.1.0
